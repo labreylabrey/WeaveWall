@@ -1,0 +1,344 @@
+/* ---- Base Styles ---- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace, sans-serif;
+  line-height: 1.5;
+  color: #222222;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+
+.logo {
+  display: block;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #222222;
+  transition: color 0.3s ease;
+}
+
+a:hover
+{
+  color: #232323;
+}
+
+/* ---- Intro ---- */
+
+.intro {
+  display: block;
+  padding: 10px 30px;
+  border: 1px solid #222222;
+  margin: 20px;
+  line-height: 2em;
+}
+
+.intro a {
+  text-decoration: underline;
+}
+
+/* ---- Search ---- */
+
+input[type="text"] {
+  font-size: 20px;
+}
+
+.grid {
+  display: block;
+  margin: 20px 10px;
+}
+
+/* ---- Content Squares ---- */
+
+.element-item {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  margin: 5px 0px;
+  padding: 10px;
+  color: #262524;
+}
+
+.element-item > * {
+  margin: 0;
+  padding: 0;
+}
+
+.element-item .description {
+  position: absolute;
+  left: 15px;
+  top: 80px;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.8em;
+  font-weight: normal;
+  max-width: 90%;
+}
+
+.element-item .name {
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  padding: 10px 5px;
+  max-width: 90%;
+}
+
+.element-item .name a:hover {
+  color: #222222;
+
+}
+
+.element-item .name a {
+  text-decoration: none;
+  color: #ffffff;
+
+}
+
+.element-item .icon {
+  position: absolute;
+  right: 8px;
+  top: -15px;
+  padding: 0 5px;
+  font-size: 3em;
+  color: white;
+}
+
+
+.element-item .creator {
+  position: absolute;
+  left: 15px;
+  top: 150px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.creator a {
+  color: white;
+  opacity: 0.9;
+  font-size: 0.9em;
+}
+
+.creator a:hover {
+  color: #222222;
+}
+
+.element-item.learn a,
+.element-item.initiatives a {
+  color: #313030;
+  font-size: 0.9em;
+}
+
+.element-item.learn a:hover,
+.element-item.initiatives a:hover {
+  color: white;
+}
+
+.element-item.creator a {
+  color: #313030;
+  font-size: 0.9em;
+}
+
+.element-item.learn p.name,
+.element-item.archive p.name {
+  font-size: 1.1em;
+  max-width: 80%;
+}
+
+.element-item.tools {
+  color: white;
+  }
+
+.element-item.archive         { background: #C24; background: hsl( 36, 100%, 50%); }
+.element-item.community       { background: #fd3a30; background: hsl(3, 98%, 59%); }
+.element-item.initiatives     { background: #0F8; background: hsl( 144, 100%, 50%); }
+.element-item.build           { background: #FFD; background: hsl( 49, 100%, 50%); }
+.element-item.tools           { background: #08F; background: hsl( 216, 100%, 50%); }
+.element-item.learn           { background: #1bf; background: hsl(178, 94%, 54%); }
+.element-item.dapps           { background: #F08; background: hsl( 324, 100%, 50%); }
+
+
+/* button overwrites
+------------------------- */
+
+.button {
+  border-color: #222;
+  padding: 5px 10px;
+  margin: 5px;
+  color: #222222;
+  background-color: #ffffff;
+}
+
+.button:hover {
+  color: white;
+  background-color: #222222;
+  cursor: pointer;
+}
+
+.is-checked {
+  color: white;
+  background-color: #222222;
+}
+
+input.quicksearch {
+display: block;
+margin: 0 auto;
+width: 92%;
+font-size: 1em;
+padding: 5px;
+}
+
+.button-group {
+  margin: 10px 15px;
+}
+
+.bottom {
+  position: absolute;
+  left: 0px;
+  top: 216px;
+  color: red;
+  background-color: white;
+  padding: 5px;
+  opacity: 0.7;
+  font-size: 1em;
+}
+
+/* ---- Footer ---- */
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+footer p {
+  padding: 5px;
+  font-size: .8em;
+  text-align: center;
+  border: 1px dotted #222222;
+}
+
+.back-to-top {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.back-to-top a {
+  text-decoration: none;
+}
+
+.up {
+  font-size: 2em;
+}
+
+/* ---- Media Query 768px ---- */
+
+@media only screen and (min-width: 768px) {
+  #container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  }
+
+  .logo {
+    display: inline-block;
+    max-width: 400px;
+  }
+  .intro,
+  .input.quicksearch {
+    max-width: 80%;
+  }
+
+  input.quicksearch {
+  margin-left: 20px;
+  width: 70%;
+  font-size: 1em;
+  padding: 5px;
+  }
+
+  .element-item {
+    display: inline-block;
+    width: 47%;
+    height: 250px;
+    margin: 10px;
+    padding: 10px;
+    background: #888;
+    color: #262524;
+  }
+
+  .element-item .creator {
+    position: absolute;
+    font-size: 0.8em;
+    left: 15px;
+    top: 150px;
+    max-width: 90%;
+  }
+}
+
+/* ---- Media Query 1024px ---- */
+
+@media only screen and (min-width: 1024px) {
+  #container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  }
+  .element-item {
+    display: inline-block;
+    width: 31%;
+    height: 250px;
+    margin: 10px;
+    padding: 10px;
+    background: #888;
+    color: #262524;
+  }
+
+  .element-item.learn a,
+  .element-item.initiatives a {
+    font-size: 0.9em;
+  }
+}
+
+@media only screen and (min-width: 1131px) {
+  #container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  }
+  .element-item {
+    display: inline-block;
+    width: 23.2%;
+    height: 250px;
+    margin: 10px;
+    padding: 10px;
+    background: #888;
+    color: #262524;
+  }
+
+  .element-item.learn a,
+  .element-item.initiatives a {
+    font-size: 0.9em;
+  }
+
+  input.quicksearch {
+    margin-left: 20px;
+    font-size: 1em;
+    width: 40%;
+    padding: 5px 10px;
+  }
+  .button {
+    border-color: #222;
+    padding: 5px 10px;
+  }
+}
